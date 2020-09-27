@@ -29,7 +29,7 @@ public class PalestraController {
 
 	@Autowired
 	private PalestraRepository palestraRepository;
-	
+
 	@Autowired
 	private RegistroPalestraService registroPalestraService;
 
@@ -56,12 +56,12 @@ public class PalestraController {
 	public Palestra salvar(@Valid @RequestBody PalestraInput palestraInput) {
 
 		Palestra palestra = toEntity(palestraInput);
-		
+
 		Palestra palestraExiste = palestraRepository.findByNome(palestra.getNome());
 
 		if (palestraExiste != null && !palestraExiste.equals(palestra))
 			throw new ServicoException("Já existe uma palestra cadastrada com esse nome");
-		
+
 		return registroPalestraService.salvar(palestra);
 	}
 

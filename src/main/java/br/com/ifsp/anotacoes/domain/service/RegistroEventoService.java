@@ -21,7 +21,7 @@ public class RegistroEventoService {
 	public Evento salvar(Evento evento) {
 
 		Conta conta = contaRepository.findById(evento.getConta().getId())
-				.orElseThrow(() -> new ServicoException("Cliente não encontrado"));
+				.orElseThrow(() -> new ServicoException("Conta não encontrado"));
 
 		evento.setConta(conta);
 

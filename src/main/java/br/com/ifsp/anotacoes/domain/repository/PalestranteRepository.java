@@ -3,11 +3,11 @@ package br.com.ifsp.anotacoes.domain.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import br.com.ifsp.anotacoes.domain.model.Palestra;
+import br.com.ifsp.anotacoes.domain.model.Palestrante;
 
 @Repository
-public interface PalestraRepository extends JpaRepository<Palestra, Long> {
+public interface PalestranteRepository extends JpaRepository<Palestrante, Long> {
 
-	Palestra findByNome(String nome);
+	Palestrante findByNome(String nome);
 
 }

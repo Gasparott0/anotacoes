@@ -17,6 +17,9 @@ public class PalestraInput {
 	@NotNull
 	private EventoAbstractModel evento;
 	
+	@NotNull
+	private PalestranteAbstractModel palestrante;
+	
 	@NotBlank
 	private String nome;
 	
